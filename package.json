@@ -1,0 +1,27 @@
+{
+    "name": "poke-choose",
+    "version": "1.0.0",
+    "description": "Micro Frontends with Next.js and Module Federation",
+    "main": "index.js",
+    "scripts": {
+        "prepare": "cd poke_host_orquest && npm install && cd ../poke_remote_1 && npm install && cd ..",
+        "start": "npm run start-app1 & npm run start-app2",
+        "start-app1": "cd poke_host_orquest && npm run dev -- -p 3000",
+        "start-app2": "cd poke_remote_1 && npm run dev -- -p 3001"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/bdanielmr/poke-choose-app"
+    },
+    "keywords": [
+        "nextjs",
+        "module-federation"
+    ],
+    "dependencies": {
+        "poke-host-orquest": "file:./poke_host_orquest",
+        "poke-remote-1": "file:./poke_remote_1"
+    },
+    "devDependencies": {
+        "concurrently": "^8.2.2"
+    }
+}
