@@ -2,7 +2,7 @@ const { NextFederationPlugin } = require("@module-federation/nextjs-mf");
 const remotes = (isServer) => {
   const location = isServer ? "ssr" : "chunks";
   return {
-    poke_host_orquest: `poke_host_orquest@${process.env.NEXT_PUBLIC_REMOTE_BASE_URL}/_next/static/${location}/remoteEntry.js`,
+    poke_host_orquest: `poke_host_orquest@${process.env.NEXT_PUBLIC_ORQUEST_BASE_URL}/_next/static/${location}/remoteEntry.js`,
   };
 };
 const nextConfig = {
