@@ -3,10 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "cross-env NEXT_PRIVATE_LOCAL_WEBPACK=true  NODE_ENV=env.local next dev",
-    "build": "cross-env NEXT_PRIVATE_LOCAL_WEBPACK=true  NODE_ENV=env.production next build",
-    "start": "cross-env NEXT_PRIVATE_LOCAL_WEBPACK=true  NODE_ENV=env.production next start",
-    "lint": "cross-env NEXT_PRIVATE_LOCAL_WEBPACK=true  NODE_ENV=env.production next lint"
+    "dev": "cross-env NEXT_PRIVATE_LOCAL_WEBPACK=true next dev",
+    "build": "cross-env NEXT_PRIVATE_LOCAL_WEBPACK=true next build",
+    "start": "cross-env NEXT_PRIVATE_LOCAL_WEBPACK=true next start",
+    "lint": "cross-env NEXT_PRIVATE_LOCAL_WEBPACK=true  next lint"
   },
   "dependencies": {
     "@module-federation/nextjs-mf": "^8.0.5",
