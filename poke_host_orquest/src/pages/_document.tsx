@@ -7,7 +7,7 @@ import {
 } from "@module-federation/nextjs-mf/utils";
 
 class MyDocument extends Document {
-  props: any;
+  declare props: any;
   static async getInitialProps(ctx: any) {
     if (
       process.env.NODE_ENV === "development" &&
