@@ -4,9 +4,9 @@
   "private": true,
   "scripts": {
     "dev": "cross-env NEXT_PRIVATE_LOCAL_WEBPACK=true  NODE_ENV=env.local next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
+    "build": "cross-env NEXT_PRIVATE_LOCAL_WEBPACK=true  NODE_ENV=env.production next build",
+    "start": "cross-env NEXT_PRIVATE_LOCAL_WEBPACK=true  NODE_ENV=env.production next start",
+    "lint": "cross-env NEXT_PRIVATE_LOCAL_WEBPACK=true  NODE_ENV=env.production next lint"
   },
   "dependencies": {
     "@module-federation/nextjs-mf": "^8.0.5",
