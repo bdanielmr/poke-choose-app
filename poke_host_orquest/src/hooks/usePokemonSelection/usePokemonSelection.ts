@@ -57,10 +57,10 @@ const usePokemonSelection = (initialPokemonChoices:any) => {
 
       setPokemonChoices(updatedPokemonChoices);
       setShowPokeAlert(true);
-      setDataPokeAlert({ message: 'success', type: 'success' });
+      setDataPokeAlert({ message: 'Cambio exitoso', type: 'success' });
     } else {
       setShowPokeAlert(true);
-      setDataPokeAlert({ message: 'error', type: 'error' });
+      setDataPokeAlert({ message: 'Escoge un pokemon', type: 'error' });
     }
   };
 
