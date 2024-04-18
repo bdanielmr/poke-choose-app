@@ -4,10 +4,12 @@
     "description": "Micro Frontends with Next.js and Module Federation",
     "main": "index.js",
     "scripts": {
-        "prepare": "cd poke_host_orquest && npm install && cd ../poke_remote_1 && npm install && cd ..",
-        "start": "npm run start-app1 & npm run start-app2",
+        "prepare": "cd poke_host_orquest && npm install && cd ../poke_remote_1 && npm install && cd ../poke_remote_2 && npm install && cd ../poke_remote_3 && npm install && cd ..",
+        "start": "npm run start-app1 & npm run start-app2 & npm run start-app3 & npm run start-app4",
         "start-app1": "cd poke_host_orquest && npm run dev -- -p 3000",
-        "start-app2": "cd poke_remote_1 && npm run dev -- -p 3001"
+        "start-app2": "cd poke_remote_1 && npm run dev -- -p 3001",
+        "start-app3": "cd poke_remote_2 && npm run dev -- -p 3002",
+        "start-app4": "cd poke_remote_3 && npm run dev -- -p 3003"
     },
     "repository": {
         "type": "git",
@@ -19,7 +21,9 @@
     ],
     "dependencies": {
         "poke-host-orquest": "file:./poke_host_orquest",
-        "poke-remote-1": "file:./poke_remote_1"
+        "poke-remote-1": "file:./poke_remote_1",
+        "poke-remote-2": "file:./poke_remote_2",
+        "poke-remote-3": "file:./poke_remote_3"
     },
     "devDependencies": {
         "concurrently": "^8.2.2"
