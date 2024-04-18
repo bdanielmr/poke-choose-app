@@ -6,7 +6,10 @@ const remotes = (isServer) => {
   };
 };
 const nextConfig = {
-  reactStrictMode: true,
+  images: {
+    domains: ['raw.githubusercontent.com'],
+  },
+  reactStrictMode: false,
   webpack(config, options) {
     config.plugins.push(
       new NextFederationPlugin({
