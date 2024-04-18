@@ -12,9 +12,8 @@ const usePokemonSelection = (initialPokemonChoices:any) => {
   useEffect(() => {
     const handleClickOutside = (event:any) => {
       if (
-        cardsRef.current &&
-        !cardsRef.current.contains(event.target) &&
-        !buttonRef?.current.contains(event.target)
+        //@ts-ignore
+        cardsRef.current && !cardsRef.current.contains(event.target) && !buttonRef?.current.contains(event.target)
       ) {
         // Se hizo clic fuera de las cards, deseleccionar todas las cartas
         setSelectedCardIds(new Set());
@@ -28,7 +27,7 @@ const usePokemonSelection = (initialPokemonChoices:any) => {
     };
   }, []);
 
-  const handleCardClick = (cardId) => {
+  const handleCardClick = (cardId:any) => {
     const updatedSelectedCardIds = new Set(selectedCardIds);
 
     if (updatedSelectedCardIds.has(cardId)) {
@@ -47,7 +46,7 @@ const usePokemonSelection = (initialPokemonChoices:any) => {
 
   const handlePokeButtonClick = () => {
     if (selectedCardIds.size > 0) {
-      const updatedPokemonChoices = pokemonChoices.map((choice, index) => {
+      const updatedPokemonChoices = pokemonChoices.map((choice:any, index:any) => {
         if (selectedCardIds.has(index + 1)) {
           // Si la carta está seleccionada, actualizar el Pokémon
           const randomPokemonNumber = getRandomPokemonNumber();

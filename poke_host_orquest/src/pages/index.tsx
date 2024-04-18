@@ -53,9 +53,12 @@ const Home = () => {
             className={`${styles['poke-card']} ${selectedCardIds.has(cardId) ? styles['selected'] : ''}`}
             onClick={() => handleCardClick(cardId)}
           >
-            {cardId === 1 && <PokeRemote1 choose={pokemonChoices[0]} />}
-            {cardId === 2 && <PokeRemote2 choose={pokemonChoices[1]} />}
-            {cardId === 3 && <PokeRemote3 choose={pokemonChoices[2]} />}
+            {/** @ts-ignore */
+            cardId === 1 && <PokeRemote1 choose={pokemonChoices[0]} />}
+            {/** @ts-ignore */
+            cardId === 2 && <PokeRemote2 choose={pokemonChoices[1]} />}
+            {/** @ts-ignore */
+            cardId === 3 && <PokeRemote3 choose={pokemonChoices[2]} />}
           </div>
         ))}
       </div>
