@@ -1,0 +1,21 @@
+.poke-card{
+    display: 'flex';
+    align-items: 'center';
+    justify-content: 'center';
+    flex-direction: column;
+    width: 280px;
+    height: 350px;
+}
+.pokemon-type[class*="water"]{
+    background:blue;
+}
+.pokemon-type[class*="grass"]{
+    background:green;
+}
+.pokemon-type[class*="electric"]{
+    background:yellow;
+}
+.type-electric{
+    background:yellow;
+
+}

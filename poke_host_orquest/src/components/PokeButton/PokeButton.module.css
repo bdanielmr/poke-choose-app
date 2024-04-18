@@ -1,0 +1,16 @@
+/* components/Button.module.css */
+
+.button {
+    background-color: #007bff; /* Color de fondo azul */
+    color: white; /* Color de texto blanco */
+    border: none; /* Sin borde */
+    padding: 10px 20px; /* Relleno interno */
+    font-size: 16px; /* Tamaño de fuente */
+    cursor: pointer; /* Cambia el cursor a pointer al pasar por encima */
+    border-radius: 5px; /* Bordes redondeados */
+  }
+  
+  .button:hover {
+    background-color: #0056b3; /* Color de fondo más oscuro al pasar por encima */
+  }
+  

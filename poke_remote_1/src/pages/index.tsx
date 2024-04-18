@@ -1,23 +1,26 @@
-import React, { Suspense } from 'react';
+import React, { useEffect, useRef } from 'react';
 import Head from "next/head";
 import Image from "next/image";
 import dynamic from 'next/dynamic';
 
-
-const Home = () => {
   // @ts-ignore
-  const ComponentExternal = dynamic(() => import('poke_host_orquest/PokeCard'), {
+  const PokeCard = dynamic(() => import('poke_host_orquest/PokeCard'), {
     loading: () => <p>Loading...</p>, // Componente a mostrar mientras se carga
     ssr: false // Permite que este componente sea renderizado solo en el cliente
   });
+
+const Home = ({ choose }: { choose: { pokemon: string } }) => {
+  const defaultChoose = choose || { pokemon: 'pikachu' };
+
   return (
     <>
-    <Suspense fallback={'loading...'}>
-      <h1>HOLA MUkkNDO DESDE EL REMOTO 2</h1>
-      <ComponentExternal />
-      </Suspense>
+      <div style={{ display: 'flex', alignItems: 'center' }}>
+        {/* @ts-ignore*/}
+        <PokeCard choose={defaultChoose} url={`https://pokeapi.co/api/v2/pokemon/${defaultChoose.pokemon}`} />
+      </div>
     </>
   );
 };
 
 export default Home;
+
