@@ -2,9 +2,7 @@ const { NextFederationPlugin } = require("@module-federation/nextjs-mf");
 const remotes = (isServer) => {
   const location = isServer ? "ssr" : "chunks";
   return {
-    poke_remote_1: `poke_remote_1@${process.env.NEXT_PUBLIC_REMOTE_BASE_URL}/_next/static/${location}/remoteEntry.js`,
-    poke_remote_2: `poke_remote_2@${process.env.NEXT_PUBLIC_REMOTE_2_BASE_URL}/_next/static/${location}/remoteEntry.js`,
-    poke_remote_3: `poke_remote_3@${process.env.NEXT_PUBLIC_REMOTE_3_BASE_URL}/_next/static/${location}/remoteEntry.js`,
+    poke_host_orquest: `poke_host_orquest@${process.env.NEXT_PUBLIC_ORQUEST_BASE_URL}/_next/static/${location}/remoteEntry.js`,
   };
 };
 const nextConfig = {
@@ -15,11 +13,10 @@ const nextConfig = {
   webpack(config, options) {
     config.plugins.push(
       new NextFederationPlugin({
-        name: "poke_host_orquest",
+        name: "poke_remote_3",
         filename: "static/chunks/remoteEntry.js",
         remotes: remotes(options.isServer),
         exposes: {
-          "./PokeCard": "src/components/PokeCard/PokeCard.tsx",
         },
         extraOptions: {
           exposePages: true,
