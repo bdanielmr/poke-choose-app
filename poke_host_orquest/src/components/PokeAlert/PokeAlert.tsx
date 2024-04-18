@@ -17,9 +17,8 @@ const PokeAlert: React.FC<PokeAlertProps> = ({ showAlert, onCloseAlert, dataAler
     if (showAlert) {
       const timeoutId = setTimeout(() => {
         onCloseAlert(); // Llamar a la función para cerrar la alerta
-      }, 3000); // Tiempo en milisegundos (3 segundos)
+      }, 2000); // Tiempo en milisegundos (2 segundos)
 
-      // Limpiar el temporizador al desmontar la componente
       return () => clearTimeout(timeoutId);
     }
   }, [showAlert, onCloseAlert]);
@@ -29,11 +28,11 @@ const PokeAlert: React.FC<PokeAlertProps> = ({ showAlert, onCloseAlert, dataAler
     <div
       style={{
         position: 'fixed',
-        top: '15%',
-        left: '85%',
+        top: '10%',
+        left: '88%',
         transform: 'translate(-50%, -50%)',
         padding: '1px 10px',
-        backgroundColor: dataAlert?.type==='success'? 'lightblue': 'lightcoral',
+        backgroundColor: dataAlert?.type==='success'? 'limegreen': 'white',
         borderRadius: '8px',
         boxShadow: '0 2px 8px rgba(0, 0, 0, 0.2)',
         width:'280px',

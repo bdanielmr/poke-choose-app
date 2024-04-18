@@ -3,13 +3,14 @@ import { useEffect } from "react";
 import useFetch from "@/hooks/useFetch/useFetch"
 import styles from "./PokeCard.module.css"
 import Image from "next/image";
+import PokeLoader from "../PokeLoader/PokeLoader";
 
 export default function PokeCard({url, choose}:any) {
   const {data, loading, error , fetchData} : any= useFetch(url)
   useEffect(() => {
     fetchData()
   }, [choose?.pokemon]);
-  if (loading) return <p>Loading...</p>;
+  if (loading) return <PokeLoader />;
   if (error) return <p>Error: {error.message}</p>;
 
   return (

@@ -107,6 +107,20 @@
 .logo {
   position: relative;
 }
+.container-img-background-orquest{
+  z-index:-1;
+  position:fixed;
+  width:100vw;
+  height:100vh;
+  top:-1px;
+  left:-1px;
+}
+.container-orquest{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
 .poke-container{
   display: flex ;
   justify-content: center;
@@ -129,8 +143,9 @@
 }
 
 .poke-card.selected {
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Sombra para el efecto de profundidad */
+  box-shadow: 0 45px 35px rgba(0, 0, 0, 0.3); /* Sombra para el efecto de profundidad */
   transform: translateY(-5px); /* Efecto de elevación */
+  border: 10px solid limegreen
 }
 
 

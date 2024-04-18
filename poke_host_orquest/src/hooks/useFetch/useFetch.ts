@@ -30,7 +30,7 @@ function useFetch<T>(url: string): UseFetchResult<T> {
     }
   }
 
-  return { data, loading, error,fetchData };
+  return { data, loading, error, fetchData };
 }
 
 export default useFetch;

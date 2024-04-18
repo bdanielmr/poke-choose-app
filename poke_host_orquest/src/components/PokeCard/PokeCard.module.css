@@ -15,7 +15,61 @@
 .pokemon-type[class*="electric"]{
     background:yellow;
 }
-.type-electric{
-    background:yellow;
 
+.type-water{
+    background:lightblue;
+}
+.type-grass{
+    background: lightseagreen;
+}
+.type-electric{
+    background:lightgoldenrodyellow;
+}
+.type-fire{
+    background:lightsalmon;
+}
+.type-bug{
+    background:lightgreen;
+}
+.type-dark{
+    background: lightslategrey;
+}
+.type-fairy{
+    background: lightpink;
+}
+.type-fighting{
+    background: linen;
+}
+.type-fly{
+    background: lightcyan;
+}
+.type-ghost{
+    background: #CBC3E3;
+} 
+.type-ground{
+    background: rgb(221, 163, 47);
+}
+.type-ice{
+    background: rgb(122, 255, 255);
+}
+.type-normal{
+    background: rgb(255, 153, 122);
+}
+.type-poison{
+    background: rgb(193, 122, 255);
+}
+.type-steel{
+    background: lightsteelblue;
+}
+.type-psychic{
+    background: #c3cfe3;
+}
+.type-dragon{
+    background: #e5eaa2;
+}
+.type-dragon{
+    background: #e5eaa2;
+}
+.type-rock{
+    background: #eacda2;
 }
