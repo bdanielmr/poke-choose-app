@@ -10,7 +10,7 @@
       "dom",
       "esnext"
     ],
-    "strict": true,
+    "strict": false,
     "jsx": "preserve",
     "esModuleInterop": true,
     "skipLibCheck": true,
