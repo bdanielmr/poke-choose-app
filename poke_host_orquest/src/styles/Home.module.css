@@ -107,6 +107,33 @@
 .logo {
   position: relative;
 }
+.poke-container{
+  display: flex ;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 100%; 
+  margin: 2rem;
+  height: 400px;
+}
+.poke-card {
+  
+  width: 280px;
+  height: 350px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 20px;
+  margin: 10px;
+  cursor: pointer;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.poke-card.selected {
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Sombra para el efecto de profundidad */
+  transform: translateY(-5px); /* Efecto de elevación */
+}
+
+
 /* Enable hover only on non-touch devices */
 @media (hover: hover) and (pointer: fine) {
   .card:hover {
